@@ -2,5 +2,5 @@ apiVersion: v2
 name: fleet-handshake
 description: An operator to sync secrets across clusters
 type: application
-version: 1.0.0
+version: 1.0.1
 appVersion: "1.0.0"
