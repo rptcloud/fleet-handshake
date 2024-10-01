@@ -1,0 +1,32 @@
+
+apiVersion: riverpointtechnology.com/v1alpha1
+kind: FleetHandshake
+metadata:
+  labels:
+    app.kubernetes.io/name: fleet-handshake
+    app.kubernetes.io/managed-by: kustomize
+  name: fleethandshake-sample
+  namespace: fleet-default
+spec:
+  secretName: fleethandshake-sample
+  secretNamespace: default
+  targetNamespace: test
+  targets:
+    - clusterSelector:
+        matchLabels:
+          managed: rancher
+---
+apiVersion: riverpointtechnology.com/v1alpha1
+kind: FleetHandshake
+metadata:
+  labels:
+    app.kubernetes.io/name: fleet-handshake
+    app.kubernetes.io/managed-by: kustomize
+  name: fleethandshake-test-only
+  namespace: fleet-default
+spec:
+  secretName: fleethandshake-test-only
+  secretNamespace: default
+  targetNamespace: test
+  targets:
+    - clusterName: test

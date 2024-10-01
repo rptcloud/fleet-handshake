@@ -1,0 +1,23 @@
+# permissions for end users to view fleethandshakes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: fleet-handshake
+    app.kubernetes.io/managed-by: kustomize
+  name: fleethandshake-viewer-role
+rules:
+- apiGroups:
+  - riverpointtechnology.com
+  resources:
+  - fleethandshakes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - riverpointtechnology.com
+  resources:
+  - fleethandshakes/status
+  verbs:
+  - get

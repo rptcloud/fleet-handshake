@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "fleet-handshake.fullname" . }}-fleethandshake-viewer-role
+  labels:
+  {{- include "fleet-handshake.labels" . | nindent 4 }}
+rules:
+- apiGroups:
+  - riverpointtechnology.com
+  resources:
+  - fleethandshakes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - riverpointtechnology.com
+  resources:
+  - fleethandshakes/status
+  verbs:
+  - get

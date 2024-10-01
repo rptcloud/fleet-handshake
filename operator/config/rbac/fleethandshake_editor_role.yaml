@@ -1,0 +1,27 @@
+# permissions for end users to edit fleethandshakes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: fleet-handshake
+    app.kubernetes.io/managed-by: kustomize
+  name: fleethandshake-editor-role
+rules:
+- apiGroups:
+  - riverpointtechnology.com
+  resources:
+  - fleethandshakes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - riverpointtechnology.com
+  resources:
+  - fleethandshakes/status
+  verbs:
+  - get
