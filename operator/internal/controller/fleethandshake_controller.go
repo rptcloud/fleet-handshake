@@ -139,8 +139,6 @@ func (r *FleetHandshakeReconciler) Reconcile(ctx context.Context, req ctrl.Reque
 		}
 	}
 
-	logger.Info(fmt.Sprintf(`{"message": "Bundle content", "name": %q, "namespace": %q, "content": %s}`, bundle.Name, bundle.Namespace, bundle.Spec.Resources[0].Content))
-
 	fleetHandshake.Status.Status = "Synced"
 	if err := r.Status().Update(ctx, &fleetHandshake); err != nil {
 		logger.Error(err, "Unable to update FleetHandshake status")
