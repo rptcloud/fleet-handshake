@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  fleet-handshake:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-10-01T20:22:32.813354528Z"
+    description: An operator to sync secrets across clusters
+    digest: 201dd852dc6e67016786cfb2c2cdc497fe105b9a0157ba7a80b1ec5d9550d142
+    name: fleet-handshake
+    type: application
+    urls:
+    - https://github.com/rptcloud/fleet-handshake/releases/download/fleet-handshake-1.0.1/fleet-handshake-1.0.1.tgz
+    version: 1.0.1
+generated: "2024-10-01T20:22:32.813360699Z"
