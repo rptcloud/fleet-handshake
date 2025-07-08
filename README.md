@@ -52,6 +52,6 @@ kubectl apply -f fleethandshake.yaml
 To install the operator, and try it out, install via Helm into your rancher cluster.
 
 ```bash
-helm repo add fleet-handshake https://rptcloud.github.com/fleet-handshake
+helm repo add fleet-handshake https://rptcloud.github.io/fleet-handshake
 helm install fleet-handshake fleet-handshake/fleet-handshake 
 ```
